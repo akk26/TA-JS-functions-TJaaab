@@ -16,9 +16,8 @@ Example:
   getFullName("Nelson", "Mandela"); // "Nelson Mandela"
 */
 
-function getFullName(firstName, LastName){
-  let fullName = (`${firstName}${LastName}`)
-  return(fullName)
+function getFullName(firstName, lastName){
+  return `${firstName} ${lastName}`;
 }
 
 
@@ -53,6 +52,24 @@ calc(20, 10, 'sub'); // 10
 calc(20, 10, 'mul'); // 200
 */
 
+function calc(firstNum, secondNum, operation){
+  if(typeof firstNum !== "number" || typeof secondNum !== "number"){
+    alert("Enter a Valid Input")
+  }
+  else{
+    switch(operation){
+      case "add": return firstNum + secondNum;
+      break;
+      case "sub": return firstNum - secondNum;
+      break;
+      case "mul": return firstNum * secondNum;
+      break;
+      case "div": return firstNum / secondNum;
+      break;
+      default: alert("Enter valid operation");
+    }
+  }
+}
 
 /*
 5. Create a function named `isLeapYear` that accepts a number data type and return `true` or `false` based
@@ -62,13 +79,10 @@ isLeapYear(2000); // true
 isLeapYear(2001); // false
 */
 
-function isLeapYear() {
- let year = +prompt("Enter Year?");
- if(year % 4 === 0 ){
-   return("true")
- } else{
-   return("false")
- }
+function isLeapYear(year) {
+ if(year % 400 === 0 ) return("true")
+ if(year % 100 === 0 ) return("false")
+ return year % 4 === 0;
 }
 
 /*

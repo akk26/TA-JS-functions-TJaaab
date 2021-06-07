@@ -40,7 +40,7 @@ function addTwoNumbers(){
 
   let firstNum = +prompt("Enter the first number");
 
-  let secondNum = +prompt("Enter the first number");
+  let secondNum = +prompt("Enter the second number");
   
   let sum = firstNum + secondNum;
   alert(`The sum of ${firstNum} and ${secondNum} is ${ firstNum + secondNum }`);
@@ -82,10 +82,14 @@ function getTable(){
 
 function isLeapYear(){
   let year = +prompt("Enter a Year?");
-  if(year % 4 === 0){
+  if(year % 400 === 0){
     alert(`${year} is a leap year `);
-  } else{
+  } else if (year % 100 === 0){
     alert(`${year} is not a leap year`);
+  } else if (year % 4 === 0){
+    alert(`${year} is a leap year`)
+  } else {
+    alert(`${year} is not a leap year`)
   }
 }
 

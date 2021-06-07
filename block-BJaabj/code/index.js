@@ -107,6 +107,5 @@ function getFactorial(){
   for(let i = number; i >= 1 ; i--){
     factorial = i*factorial;
   }
-  
   alert(`The factorial of ${number} is ${factorial}`)
 }

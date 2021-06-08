@@ -22,8 +22,10 @@ calculateDogAge(5)
   * [ ] Return the total number of movie you will watch.
 */
 
-function calculateMoviesToWatch(number,maxage=70) {
-  return number * 4 * 12 * maxage;
+function calculateMoviesToWatch(age, numberOfMovies) {
+  const MAX_AGE= 70;
+  let totalNumberOfMovies = (MAX_AGE - age)* 12 * 4 * numberOfMovies ;
+  return totalNumberOfMovies;
 }
 
 /*
@@ -57,8 +59,7 @@ function fahrenheitToCelsius(temp) {
 function pow(n, x) {
   if(n <= 0){
     return "The number below 1 is not allowed";
-  }
-  return n ** x;
+  } else return n ** x;
 }
 
 // Test
